@@ -19,7 +19,7 @@ Install packages required
 Migrate models of each app
 
 ```python
-python manage.py makemigrations inventory
+python manage.py makemigrations info sync
 python manage.py migrate
 ```
 
