@@ -1,0 +1,12 @@
+venv/
+.vscode
+
+# Django
+*.sqlite3
+media/
+*.log
+*.pyc
+*.pot
+__pycache__/
+secret_key.txt
+migrations/
