@@ -3,12 +3,12 @@ from django.http import HttpResponse, HttpResponseBadRequest
 
 # Index page of info app
 def index(request):
-    return HttpResponse("Hello. You're at the info app index.")
+    return render(request, 'info/index.html')
 
 # About Page
 def about(request):
-    return HttpResponse("Hello. You're at the about page.")
+    return render(request, 'info/about.html')
 
 # Contact Page
 def contact(request):
-    return HttpResponse("Hello. You're at the contact page.")
+    return render(request, 'info/contact.html')
