@@ -8,7 +8,7 @@ Setup your virtual environment named venv
 
 `virtualenv venv`
 
-Switch to your virual environment
+Switch to your virtual environment
 
 `source venv/bin/activate`
 
