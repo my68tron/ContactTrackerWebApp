@@ -1,6 +1,6 @@
 # ContactTrackerWebApp
 
-This is a Django based web app which will be used to get data from its Android app
+This is a Django based web app which will be used to get data from its Android based app
 
 # How to setup
 
