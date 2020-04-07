@@ -48,24 +48,9 @@
                 <div class="dropdown-menu" style="width:3em,padding :5em">
                   <a class="dropdown-item-text" style="text-decoration: none;" href="#"></a>
                     <form style="padding:20px" method="post" class="was-validated" action="">
-                    <div class="form-group">
-                      <label for="remail">Email:</label>
-                      <input type="email" class="form-control" id="remail" placeholder="Enter email" name="remail" required>
-                      <div class="valid-feedback">Valid.</div>
-                      <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-                    <div class="form-group">
-                      <label for="rpwd">Password:</label>
-                      <input type="password" class="form-control" id="rpwd" placeholder="Enter password" name="rpwd" required>
-                      <div class="valid-feedback">Valid.</div>
-                      <div class="invalid-feedback">Please fill out this field.</div>
-                    </div>
-                    <div class="form-group form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox" name="remember"> Remember me!
-                      </label>
-                    </div>
-                    <button id="Login" type="submit" class="btn btn-primary"  >Sign in</button>
+                    {{login_form.as_p}}
+                    {%csrf_token%}
+                    <input id="Login" type="submit" value="Login" class="btn btn-primary"  >
                   </form>
                 </div>
               </li>
