@@ -36,7 +36,7 @@ def index(request):
 	else:
 		login_form = AdminLoginForm()
 	return render(request, 'info/index.html', context={'login_form': login_form})
-    
+
 
 # About Page
 def about(request):
@@ -56,9 +56,9 @@ def track_user(request):
 		search_form = SearchForm(data=request.POST)
 		if search_form.is_valid():
 			cd = search_form.cleaned_data
-		contact_list = Contact.objects.filter(from_mob_no=cd['search_text']).order_by('timestamp')
-
-	return render(request, 'info/track.html', {'search_form':search_form, 'contact_list': contact_list})
+		contact_list1 = Contact.objects.filter(from_mob_no=cd['search_text']).order_by('timestamp')
+		contact_list2 = Contact.objects.filter(to_mob_no=cd['search_text']).order_by('timestamp')
+	return render(request, 'info/track.html', {'search_form':search_form, 'contact_list1': contact_list1,'contact_list2': contact_list2})
 
 
 
