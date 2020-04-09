@@ -11,6 +11,7 @@ Process Flow:
 ![img1](/static/images/process_flow.jpeg)
 Data Flow Diagram:
 ![img2](/static/images/data_flow.jpeg | width=300)
+<img src="/static/images/data_flow.jpeg" width="300">
 
 
 
