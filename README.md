@@ -10,7 +10,7 @@ The software packages required with their version are mentioned in requirements.
 Process Flow:
 ![img1](/static/images/process_flow.jpeg)
 Data Flow Diagram:
-![img2](/static/images/data_flow.jpeg)
+![img2](/static/images/data_flow.jpeg = 300x300)
 
 
 
