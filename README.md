@@ -8,7 +8,7 @@ Software Requirements:
 The software packages required with their version are mentioned in requirements.txt file.
 
 Process Flow:
-
+<img src="\\static\\images\\process_flow.jpeg" alt="">
 Data Flow Diagram:
 
 
