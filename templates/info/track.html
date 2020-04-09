@@ -46,30 +46,16 @@
 	      </tr>
 				{%endfor%}
 				{%endif%}
-	    </tbody>
-			</table>
-	</div>
-	<div class="container table-responsive" style= "padding-top :4em">
-	  <h2>Table</h2>
-	  <p>This table contains the contact number of people .</p>
-	  <table class="table">
-	    <thead class="thead-dark">
-	      <tr>
-	        <th>Contact no.</th>
-	        <th>Timestamp</th>
-	      </tr>
-	    </thead>
-	    <tbody>
-	      <tr>
+				<tr>
 					{%if contact_list2 %}
 					{%for contact in contact_list2 %}
-	        <td>{{contact.from_mob_no}}</td>
-	        <td>{{contact.timestamp}}</td>
-	      </tr>
+					<td>{{contact.from_mob_no}}</td>
+					<td>{{contact.timestamp}}</td>
+				</tr>
 				{%endfor%}
 				{%endif%}
 	    </tbody>
 			</table>
-	</div>
+
 </body>
 </html>
