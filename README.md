@@ -11,10 +11,14 @@ Process Flow:
 ![img1](/static/images/process_flow.jpeg)
 Data Flow Diagram:
 <<<<<<< HEAD
+<<<<<<< HEAD
 <img src="/static/images/data_flow.jpeg" alt="" width="300" height="300">
 =======
 ![img2](/static/images/data_flow.jpeg =300x300)
 >>>>>>> ffe47beef2bd5d8876f9fee9cfdc051a490f961f
+=======
+![img2](/static/images/data_flow.jpeg | width=300)
+>>>>>>> 7922e4fc1eef6074dce4981f33d09cef1b277fed
 
 
 
