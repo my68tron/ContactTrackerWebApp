@@ -8,4 +8,6 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('contact', views.contact, name='contact'),
     path('track/', views.track_user, name="track"),
+    path('init', views.initialise, name='init'),
+    path('update', views.update, name='update'),
 ]
