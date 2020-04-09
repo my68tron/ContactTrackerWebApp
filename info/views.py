@@ -51,7 +51,8 @@ def contact(request):
 @login_required
 def track_user(request):
 	search_form = SearchForm()
-	contact_list = None
+	contact_list1 = None
+	contact_list2 = None
 	if request.method == 'POST':
 		search_form = SearchForm(data=request.POST)
 		if search_form.is_valid():
