@@ -1,0 +1,40 @@
+{# {%extends 'base.html' %} #}
+
+
+{# {% block content%} #}
+
+{# {%endblock%} #}
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<form method="post">
+	{{search_form.as_p}}
+	{%csrf_token%}
+	<input type="submit" value="Search">
+</form>
+
+
+{%if contact_list %}
+<ol>
+{%for contact in contact_list%}
+<li>
+	<p>{{contact.to_mob_no}}</p>
+</li>
+
+{%endfor%}
+</ol>
+{%endif%}
+
+
+
+</body>
+</html>

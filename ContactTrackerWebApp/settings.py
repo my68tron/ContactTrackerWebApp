@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'info',
     'sync',
-    'profiles'
+    # 'profiles'
 ]
 
 MIDDLEWARE = [
@@ -144,3 +144,9 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIAFILES_DIRS = [
     MEDIA_DIR,
 ]
+
+
+
+
+LOGIN_URL = '/'
+LOGIN_REDIRECT_URL = 'admin/'
