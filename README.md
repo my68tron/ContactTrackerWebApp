@@ -11,6 +11,7 @@ Process Flow:
 ![img1](/static/images/process_flow.jpeg)
 
 Data Flow Diagram:
+
 <img src="/static/images/data_flow.jpeg" alt="" width="300" height="300">
 
 # ContactTrackerWebApp
