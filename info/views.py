@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
 	# logout required for login
 	if request.user.is_authenticated:
-		return HttpResponseRedirect("admin/")
+		return HttpResponseRedirect("track/")
 
 	# if form filled
 	if request.method == 'POST':
@@ -24,7 +24,7 @@ def index(request):
 			if user is not None:
 				if user.is_active:
 					login(request, user)
-					return HttpResponseRedirect("admin/")
+					return HttpResponseRedirect("track/")
 
 				else:
 					return HttpResponse("Account Terminated!")
