@@ -81,20 +81,21 @@ def handle_uploaded_file(f):
 @csrf_exempt
 def update(request):
     if request.method == 'POST':
-        filesList = request.FILES.getlist('contacts_info')
-        fileName = handle_uploaded_file(filesList[0])
-        from_mob_no = int(filesList[0].name)
-        with open(fileName, 'r') as f:
-            index = 0
-            csvFile = csv.reader(f)
-            for row in csvFile:
-                contact = Contact.objects.create(
-                    from_mob_no=from_mob_no, to_mob_no=int(row[0]), timestamp=row[1])
-                index += 1
-        os.remove(fileName)
-        print('Total Contacts :', index)
+        request_body = json.loads(request.body.decode('utf-8'))
+        from_mob_no = request_body['from_mob_no']
+
+        for row in request_body['contacts']:
+            try:
+                contact = Contact.objects.get(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
+            except Contact.DoesNotExist:
+                contact = Contact.objects.get(from_mob_no=row['to_mob_no'], to_mob_no=from_mob_no)
+            except Contact.DoesNotExist:
+                contact = Contact(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
+            contact.timestamp = row['timestamp']
+            contact.save()
+        
         return JsonResponse({
             'result': True,
-            'total_contacts': index
+            'total_contacts': len(request_body['contacts'])
         })
     return HttpResponseBadRequest("Bad Request")
