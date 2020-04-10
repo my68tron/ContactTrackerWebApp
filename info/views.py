@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, HttpResponseBadRequest
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from info.forms import SearchForm, AdminLoginForm
 from info.models import Contact
 from django.contrib.auth.decorators import login_required
