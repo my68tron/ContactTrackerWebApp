@@ -42,6 +42,12 @@ def index(request):
         login_form = AdminLoginForm()
     return render(request, 'info/index.html', context={'login_form': login_form})
 
+def logout_view(request):
+    if request.user.is_authenticated:
+        logout(request)
+    return HttpResponseRedirect('/')
+
+
 
 # About Page
 def about(request):

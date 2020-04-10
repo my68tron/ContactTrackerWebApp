@@ -25,6 +25,10 @@
 		</div>
 		<input type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Search">
 	</form>
+
+	{%if request.user.is_authenticated%}
+		<a href="{%url 'info:logout' %}"><button class="btn btn-danger">Logout</button></a>
+	{%endif%}
 </nav>
 	</div>
 
