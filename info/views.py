@@ -94,9 +94,10 @@ def update(request):
             try:
                 contact = Contact.objects.get(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
             except Contact.DoesNotExist:
-                contact = Contact.objects.get(from_mob_no=row['to_mob_no'], to_mob_no=from_mob_no)
-            except Contact.DoesNotExist:
-                contact = Contact(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
+                try:
+                    contact = Contact.objects.get(from_mob_no=row['to_mob_no'], to_mob_no=from_mob_no)
+                except Contact.DoesNotExist:
+                    contact = Contact(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
             contact.timestamp = row['timestamp']
             contact.save()
         
