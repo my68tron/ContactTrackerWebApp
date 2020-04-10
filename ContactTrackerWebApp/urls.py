@@ -19,7 +19,6 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('info.urls')),
-    path('sync/', include('sync.urls')),
     path('admin/', admin.site.urls),
     # path('register/', profiles_views.end_user_register, name="register"),
 ]
