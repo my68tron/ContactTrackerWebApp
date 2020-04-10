@@ -2,7 +2,7 @@ from django import forms
 
 
 class SearchForm(forms.Form):
-	search_text = forms.IntegerField()
+	search_text = forms.IntegerField( label='' )
 
 
 
