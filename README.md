@@ -34,6 +34,8 @@ Switch to your virtual environment
 
 `source venv/bin/activate`
 
+Rename **.env.example** to __**.env**__
+
 Install packages required
 
 `pip install -r requirements.txt`
@@ -41,7 +43,7 @@ Install packages required
 Migrate models of each app
 
 ```python
-python manage.py makemigrations info sync
+python manage.py makemigrations info
 python manage.py migrate
 ```
 
