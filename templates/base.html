@@ -40,7 +40,6 @@
               <nav class="site-navigation text-right ml-auto d-none d-lg-none" role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto ">
                   <li class="active"><a href="{% url 'info:index' %}" class="nav-link">Home</a></li>
-                  <li><a href="{% url 'info:about' %}" class="nav-link">About</a></li>
                   <li class="nav-item dropdown"  >
                 <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                   Log in
@@ -54,7 +53,12 @@
                   </form>
                 </div>
               </li>
-                  <li><a href="{% url 'info:contact' %}" class="nav-link">Contact</a></li>
+                  <li><a class="nav-link" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample">Contact Us</a></h3>
+                      <div class="collapse" id="collapseExample4">
+                          <div class="card card-body">
+                            To contact us, mail us your queries at tanmayvijay27@gmail.com
+              </div>
+            </div></li>
                 </ul>
               </nav>
             </div>
@@ -68,13 +72,14 @@
 
       <footer class="site-footer">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-3">
-              <h2 class="footer-heading mb-3">About Me</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+          <!--div class="row"-->
+            <div class="col-lg-12">
+              <h1 style="text-align: center;"> About Us</h1>
+              <p>Our idea is to make an app and web-based solution in which each and every person having the app has its unique ID .The basic idea of this solution is to take a precautionary measure that if a person found infected later we have list and data of all the contacts that he has made to or were near to him . When two or more people come near to each other the app links the ID of all the people and send this data to the website with the time stamp .This data is can be used by officials to trace the chain .If not connected to the internet still the app keeps the data saved locally and upload it whenever internet is available .The app runs in the background . This data on the website is available for viewing to some official persons only using the login credentials and then the official can enter the id of infected person and can get list of persons he has made contact to.
+              The website also provide some basic information and awareness content regarding COVID-19.</p>
             </div>
 
-          </div>
+          <!--/div-->
           <div class="row pt-5 mt-5 text-center">
             <div class="col-md-12">
               <div class="border-top pt-5">
