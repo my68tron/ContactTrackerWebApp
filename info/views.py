@@ -42,11 +42,11 @@ def index(request):
         login_form = AdminLoginForm()
     return render(request, 'info/index.html', context={'login_form': login_form})
 
+
 def logout_view(request):
     if request.user.is_authenticated:
         logout(request)
     return HttpResponseRedirect('/')
-
 
 
 # About Page
@@ -92,15 +92,18 @@ def update(request):
 
         for row in request_body['contacts']:
             try:
-                contact = Contact.objects.get(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
+                contact = Contact.objects.get(
+                    from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
             except Contact.DoesNotExist:
                 try:
-                    contact = Contact.objects.get(from_mob_no=row['to_mob_no'], to_mob_no=from_mob_no)
+                    contact = Contact.objects.get(
+                        from_mob_no=row['to_mob_no'], to_mob_no=from_mob_no)
                 except Contact.DoesNotExist:
-                    contact = Contact(from_mob_no=from_mob_no, to_mob_no=row['to_mob_no'])
+                    contact = Contact(from_mob_no=from_mob_no,
+                                      to_mob_no=row['to_mob_no'])
             contact.timestamp = row['timestamp']
             contact.save()
-        
+
         return JsonResponse({
             'result': True,
             'total_contacts': len(request_body['contacts'])
