@@ -6,6 +6,10 @@ The website also provide some basic information and awareness content regarding 
 
 [Live Website](https://coronacontacttracker.herokuapp.com/)
 
+[Android App](/static/ContactTracker.apk)
+
+[Android App Repository](https://github.com/my68tron/ContactTrackerAndroidApp)
+
 Software Requirements:
 The software packages required with their version are mentioned in requirements.txt file.
 
