@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Contact(models.Model):
-    from_mob_no = models.IntegerField()
-    to_mob_no = models.IntegerField()
+    from_mob_no = models.CharField(max_length=10)
+    to_mob_no = models.CharField(max_length=10)
     timestamp = models.DateTimeField()
 
     def __str__(self):
