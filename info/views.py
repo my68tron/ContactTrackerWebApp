@@ -93,5 +93,8 @@ def update(request):
                 index += 1
         os.remove(fileName)
         print('Total Contacts :', index)
-        return JsonResponse({'total_contacts': index})
+        return JsonResponse({
+            'result': True,
+            'total_contacts': index
+        })
     return HttpResponseBadRequest("Bad Request")
