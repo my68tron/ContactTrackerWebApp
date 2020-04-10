@@ -10,6 +10,10 @@ The website also provide some basic information and awareness content regarding 
 
 [Android App Repository](https://github.com/my68tron/ContactTrackerAndroidApp)
 
+Login Credentials for testing:
+**Username:** __admin__
+**Password:** __admin@password__
+
 Software Requirements:
 The software packages required with their version are mentioned in requirements.txt file.
 
