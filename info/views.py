@@ -49,8 +49,6 @@ def logout_view(request):
     return HttpResponseRedirect('/')
 
 
-
-
 # About Page
 def about(request):
     return render(request, 'info/about.html')
