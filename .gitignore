@@ -10,3 +10,4 @@ media/
 *.pot
 __pycache__/
 secret_key.txt
+.env
