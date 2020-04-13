@@ -12,9 +12,9 @@ The website also provide some basic information and awareness content regarding 
 
 Login Credentials for testing:
 
-**Username:** admin
+**Username:** test
 
-**Password:** admin@password
+**Password:** test@password
 
 Software Requirements:
 The software packages required with their version are mentioned in requirements.txt file.

@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, JsonResponse, HttpResponseBadRequest
 from django.contrib.auth import authenticate, login, logout
-from .forms import SearchForm, AdminLoginForm
-from .models import Contact
+from info.forms import SearchForm, AdminLoginForm
+from info.models import Contact
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
